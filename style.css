@@ -1,0 +1,282 @@
+body {
+    background-color: #EAE6E1;
+    color: #23211c;
+    font-family: "Sniglet", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+/* Navigation Bar Setup  */
+.navbar {
+    position: fixed; /* Keep the navbar fixed at the top of the page */
+    top: 0;
+    width: 100%; /* Stretch the navbar to the full width of the viewport */
+    background-color: #544C40;
+    color: white;
+    padding: 10px 0;
+    z-index: 1000; /* Ensure the navbar is above other elements */
+}
+
+.navbar ul {
+    list-style: none; /* Remove default list styling (bullets) */ /* 箇条書きの点削除 */
+    display: flex; /* Use flexbox to layout the list items */
+    justify-content: left; /* Align the list items to the left */
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin: 0 15px; /* Set space between each list item */
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none; /* Remove underline from links */
+    font-size: 1.2rem;
+    padding: 5px 30px;
+    transition: background-color 0.3s; /* Smooth transition for background color changes */
+}
+
+.navbar ul li a:hover {
+    background-color: #EAE6E1; /* Change background color on hover */
+    color: #544C40; /* Change text color on hover */
+    border-radius: 5px;
+}
+
+/* Add padding to the top of each section (considering the fixed navbar) */
+#home, #aboutme, #projects, #contactme {
+    padding-top: 80px;
+}
+
+
+/* Base setup for the Home section */
+.home-container {
+    display: flex; /* Use flexbox for layout */
+    height: 800px;
+    width: 100%; /* Full width of the viewport */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    padding: 20px;
+    gap: 0px;
+}
+
+* {
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.greet {
+    flex: 1; /* Allow to grow and fill space equally */ /* 空間を均等に使う */
+    min-width: 300px; /* Ensure minimum width */ /* 最小幅を設定 */
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+    justify-content: center; /* Center children vertically */
+    text-align: center; /* Center text inside the element */
+    padding: 20px;
+}
+
+/* Adjust font size for the greeting title */
+.hello {
+    font-size: 6rem;
+}
+
+/* Adjust font size for the greeting paragraph */
+.greet > p {
+    font-size: 2rem;
+}
+
+.bear1 img {
+    clip-path: inset(70px 70px 70px 70px); /* Trim the image from all sides */ /* 上、右、下、左からトリミング */
+}
+
+/* Style for the dotted line separating sections */ /* 項目ごとに仕切る点線の設定 */
+.dotted-line {
+    border-bottom: 5px dotted #544C40;
+}
+
+/* Font settings for the four main titles */
+.title {
+    font-size: 4rem;
+    padding: 20px;
+}
+
+
+/* Ensure each item in the About Me section does not overlap */ /* About Me の各項目が被らないように設定 */
+.aboutme-container {
+    display: block; /* Display block-level element */
+    padding: 20px;
+}
+
+/* Base styling for each item in the About Me section */ /* About Me の 各項目の土台指定 */
+.about {
+    background-color: whitesmoke;
+    padding: 20px;
+    border: 2px  solid #544C40;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+/* Adjust font size for subtitles */
+.subtitle {
+    font-size: 2.5rem; 
+}
+
+.whatIlike-container {
+    display: flex; /* Use flexbox for layout */
+    gap: 20px;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: space-around; /* Distribute items with space around them */
+}
+
+.whatIlike-container > div {
+    display: flex; /* Arrange items horizontally */
+    align-items: center; /* Vertically center-align items */
+    padding-top: 10px;
+    gap: 5px; /* Adjust space between image and text */
+}
+
+.whatIlike-container img {
+    border-radius: 50%; /* Make images circular */
+    height: 200px;
+    float: left; /* Float images to the left */
+}
+
+.card p {
+    width: 150px; /* Set a fixed width for the text */
+    text-align: left; /* Align text to the left */
+    margin-left: 30px; /* Remove default margin */
+}
+
+.name {
+    font-size: 1.5rem;
+}
+
+
+
+/* Ensure each item in the Projects container does not overlap */ /* Projects container の各項目が被らないように設定 */
+.projects-container {
+    display: block; /* Display as a block-level element */
+    padding: 20px;
+}
+
+/* Base styling for each Project item */
+.project {
+    background-color: whitesmoke;
+    padding: 20px;
+    border: 2px solid #544C40;
+    border-radius: 10px;
+    margin: 20px;
+    display: inline-flex; /* Use inline-flex for layout */
+}
+
+/* Ensure each item in the Contact Me container does not overlap */
+.contactme-container {
+    display: block; /* Display as a block-level element */
+    padding: 20px;
+}
+
+/* Base styling for each Contact item */
+.contact {
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-flex; /* Use inline-flex to place text below the icon */
+    flex-direction: column; /* Stack children vertically */
+    margin-left: 0px;
+}
+
+.contact img {
+    border-radius: 10px;
+}
+
+.contact p {
+    width: 70px; /* Match the width to the image */
+    text-align: center; /* Center-align text */
+    margin: 0;
+    font-size: 0.8rem;
+}
+
+
+
+/* Style changes for media queries */
+@media (max-width: 768px) {
+    .hello {
+        font-size: 3.5rem; /* Reduce font size for smaller screens */
+    }
+    .greet > p {
+        font-size: 1.5rem; /* Reduce font size for smaller screens */
+    }
+
+    .title {
+        font-size: 2.5rem;
+        padding: 20px;
+    }
+
+    .subtitle {
+    font-size: 1.5rem; 
+    }
+
+    .name {
+        font-size: 1.2rem;
+    }
+
+    .navbar {
+        padding: 5px 0; /* Reduce padding for the navbar */
+        background-color: #544C40; /* Ensure consistent background color */
+    }
+
+    .navbar ul {
+        flex-direction: column; /* Stack list items vertically */
+        align-items: center; /* Center-align the list */
+    }
+
+    .navbar ul li {
+        margin: 10px 0; /* Add space between each list item */
+    }
+
+    .navbar ul li a {
+        font-size: 1rem; /* Reduce font size for links */
+        padding: 10px 15px; /* Adjust padding for links */
+    }
+
+    #home, #aboutme, #projects, #contactme {
+        padding-top: 190px; /* Adjust for the height of the navbar */
+    }
+
+    .home-container {
+        flex-direction: column; /* Stack elements vertically within the container */
+        align-items: center; /* Keep elements centered */
+    }
+    
+    .home-container .bear1 img {
+        height: auto; /* Automatically adjust height */
+        max-width: 100%; /* Constrain width to fit the container */
+    }
+
+    .whatIlike-container {
+        flex-direction: column; /* Stack cards vertically within the container */
+        align-items: center; /* Center-align the cards */
+    }
+
+    .card {
+        width: 100%; /* Expand card width to fit the container */
+        margin-bottom: 20px; /* Add space between cards */
+        display: flex;
+        flex-direction: column; /* Stack image and text vertically */
+        align-items: center; /* Center-align the content */
+        text-align: center; /* Center-align text */
+    }
+
+    .card img {
+        max-width: 100%; /* Constrain image width to fit the card */
+        height: auto; /* Automatically adjust height */
+        border-radius: 50%; /* Keep images circular */
+    }
+
+    .card p {
+        margin-left: 0; /* Remove left margin */
+        width: auto; /* Allow text to take available width */
+        text-align: center; /* Center-align text */
+    }
+    
+}
